@@ -8,9 +8,12 @@ import android.widget.TextView;
 
 import org.w3c.dom.Text;
 
+import java.util.List;
+
 public class FindBeerActivity extends AppCompatActivity {
     Spinner color;
     TextView brands;
+    private BeerExpert beerExpert = new BeerExpert();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,6 +26,12 @@ public class FindBeerActivity extends AppCompatActivity {
         brands = findViewById(R.id.brands);
         brands.setText("Gottle of geer");
         String beerType = String.valueOf(color.getSelectedItem());
-        brands.setText(beerType);
+
+        List<String> brandBeerList = beerExpert.getBrands(beerType);
+        StringBuilder brandsFormatted = new StringBuilder();
+        for (String brand: brandBeerList) {
+            brandsFormatted.append("\n").append(brand);
+        }
+        brands.setText(brandsFormatted);
     }
 }
