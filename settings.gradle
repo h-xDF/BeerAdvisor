@@ -1,1 +1,1 @@
-include ':app', ':mymessanger'
+include ':app', ':mymessanger', ':stopwatch'
