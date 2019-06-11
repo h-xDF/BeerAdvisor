@@ -1,7 +1,6 @@
 package com.hfad.stopwatch;
 
 import android.os.Handler;
-import android.os.PersistableBundle;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -13,7 +12,8 @@ import java.util.Locale;
 public class StopwatchActivity extends AppCompatActivity implements View.OnClickListener {
     private int seconds = 0;
     private boolean running;
-    Button btnStart, btnStop, btnReset;
+    private boolean wasRunning;
+    private Button btnStart, btnStop, btnReset;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,6 +31,7 @@ public class StopwatchActivity extends AppCompatActivity implements View.OnClick
         if(savedInstanceState != null) {
             seconds = savedInstanceState.getInt("seconds");
             running = savedInstanceState.getBoolean("running");
+            wasRunning = savedInstanceState.getBoolean("wasRunning");
         }
         runTimer();
     }
@@ -79,5 +80,21 @@ public class StopwatchActivity extends AppCompatActivity implements View.OnClick
         super.onSaveInstanceState(outState);
         outState.putInt("seconds", seconds);
         outState.putBoolean("running", running);
+        outState.putBoolean("wasRunning", wasRunning);
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        wasRunning = running;
+        running = false;
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        if (wasRunning) {
+            running = true;
+        }
     }
 }
