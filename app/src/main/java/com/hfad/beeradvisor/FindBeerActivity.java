@@ -19,6 +19,7 @@ public class FindBeerActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_find_beer);
+        //setContentView(R.layout.activity_main); // Constrain layout
     }
 
     public void onClickfindBeer(View view) {

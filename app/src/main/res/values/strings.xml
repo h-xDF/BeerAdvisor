@@ -2,6 +2,11 @@
     <string name="app_name">Beer Adviser</string>
     <string name="find_beer">Find Beer!</string>
     <string name="brands">No beers selected</string>
+    <string name="to_label">To:</string>
+    <string name="email_hint">Enter email address</string>
+    <string name="subject_hint">Subject</string>
+    <string name="message_hint">Message</string>
+    <string name="send_button">Send</string>
     <string-array name="beer_colors">
         <item>light</item>
         <item>amber</item>
