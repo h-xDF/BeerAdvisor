@@ -1,7 +1,7 @@
 package com.hfad.workout;
 
 public class Workout {
-    public static final String workout = "WORKOUT";
+    //public static final String workout = "WORKOUT";
     private String name;
     private String description;
 
