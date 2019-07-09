@@ -1,7 +1,6 @@
 package com.hfad.workout;
 
 public class Workout {
-    //public static final String workout = "WORKOUT";
     private String name;
     private String description;
 
@@ -16,9 +15,9 @@ public class Workout {
                     "500 meter run\n21 x 1.5 pood kettleball swing\n21 x pull-ups")
     };
 
-    private Workout(String name, String discription) {
+    private Workout(String name, String description) {
         this.name = name;
-        this.description = discription;
+        this.description = description;
     }
 
     public String getName() {
