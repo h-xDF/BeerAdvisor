@@ -4,16 +4,11 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".MainActivity">
+    tools:context=".TopFragment">
 
-    <include
-        layout="@layout/toolbar_main"
-        android:id="@+id/toolbar"/>
-
-    <android.support.v4.view.ViewPager
-        android:id="@+id/pager"
+    <TextView
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
-    </android.support.v4.view.ViewPager>
+        android:layout_height="match_parent"
+        android:text="@string/title_top" />
 
 </LinearLayout>
