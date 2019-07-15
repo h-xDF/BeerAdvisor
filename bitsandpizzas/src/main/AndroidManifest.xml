@@ -12,10 +12,15 @@
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
         <activity
+            android:name=".PastaDetailActivity"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".PizzaDetailActivity"
+            android:parentActivityName=".MainActivity" />
+        <activity
             android:name=".OrderActivity"
             android:label="@string/create_order_title"
-            android:parentActivityName=".MainActivity">
-        </activity>
+            android:parentActivityName=".MainActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

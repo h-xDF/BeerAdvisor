@@ -8,7 +8,7 @@ public class Pasta {
       new Pasta("Lasagne", R.drawable.lasagne),
       new Pasta("Spaghetti Bolognese", R.drawable.bolongese)};
 
-    public Pasta(String name, int imageResourceId) {
+    private Pasta(String name, int imageResourceId) {
         this.name = name;
         this.imageResourceId = imageResourceId;
     }
