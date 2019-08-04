@@ -26,6 +26,5 @@ public class TopLevelActivity extends AppCompatActivity {
         
         ListView listView = findViewById(R.id.list_options);
         listView.setOnItemClickListener(itemClickListener);
-
     }
 }
