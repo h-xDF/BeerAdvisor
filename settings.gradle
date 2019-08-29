@@ -1,1 +1,1 @@
-include ':app', ':mymessanger', ':stopwatch', ':duck', ':starbuzz', ':bitsandpizzas', ':workout', ':catchat', ':joke'
+include ':app', ':mymessanger', ':stopwatch', ':duck', ':starbuzz', ':bitsandpizzas', ':workout', ':catchat', ':joke', ':odometer'
