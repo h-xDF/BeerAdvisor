@@ -68,7 +68,8 @@ public class MainActivity extends AppCompatActivity {
                     distance = odometer.getDistance();
                 }
 
-                String distanceStr = String.format(Locale.getDefault(), "%1f,.2f km", distance);
+                String distanceStr = String.format(Locale.getDefault(),
+                        "%1f,.2f km", distance);
                 distanceView.setText(distanceStr);
                 handler.postDelayed(this, 1000);
             }
