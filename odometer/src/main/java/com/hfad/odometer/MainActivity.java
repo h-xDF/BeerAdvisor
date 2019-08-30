@@ -69,7 +69,7 @@ public class MainActivity extends AppCompatActivity {
                 }
 
                 String distanceStr = String.format(Locale.getDefault(),
-                        "%1f,.2f km", distance);
+                        "%1$, .2f km", distance);
                 distanceView.setText(distanceStr);
                 handler.postDelayed(this, 1000);
             }
